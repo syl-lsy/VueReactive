@@ -16,5 +16,6 @@ export function hasChanged(oldValue, newValue) {
 // 检查是否为原始值
 export const RAW = Symbol('raw');
 
+// 存储types的ITERATE属性
 
-
+export const ITERATE_KEY = Symbol('iterate');

@@ -1,7 +1,7 @@
 import { track } from '../effect/track.js';
-import TotalType from '../type/type.js';
+import { TrackTypes } from '../type/type.js';
 export default function ownKeysHandler(target) {
-  track(target, TotalType.ITERATE);
+  track(target, TrackTypes.ITERATE);
   const result = Reflect.ownKeys(target);
   return result;
 }

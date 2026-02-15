@@ -1,8 +1,11 @@
-export default {
+export const TrackTypes = {
   GET: 'get',
-  SET: 'set',
-  DELETE: 'delete',
-  ADD: 'add',
   HAS: 'has',
   ITERATE: 'iterate',
+};
+
+export const TriggerTypes = {
+  SET: 'set',
+  ADD: 'add',
+  DELETE: 'delete',
 };

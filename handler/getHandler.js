@@ -1,7 +1,7 @@
 // get函数处理器
 import { track, pauseDepend, resumeDepend } from '../effect/track.js';
 import { isObject, RAW } from '../utils/utils.js';
-import TotalType from '../type/type.js';
+import { TrackTypes } from '../type/type.js';
 import reactive from '../reactive.js';
 
 // 如果是数组中的对象需要先找代理对象上的，如果找不到则在原始对象中查找
@@ -38,7 +38,7 @@ export default function getHandler(target, key) {
     return arrayFunctionStore[key];
   }
   // 收集依赖
-  track(target, TotalType.GET, key);
+  track(target, TrackTypes.GET, key);
   const result = Reflect.get(target, key);
   // 判断是不是对象，如果是对象则递归代理
   if (isObject(result)) {
